@@ -16,11 +16,13 @@ func init_sdl() bool {
 }
 
 //Final cleanup
-func final_cleanup() int {
+func final_cleanup() {
 		sdl.Quit()
-		return 0
 }
 func main() {
+		//Successful exit status
+		//
+		defer os.Exit(0)
 		// Initialize SDL
 		//
 		if !init_sdl() {
@@ -28,5 +30,5 @@ func main() {
 		}
 		//Final cleanup
 		//
-		os.Exit(final_cleanup())
+		defer final_cleanup()
 }
