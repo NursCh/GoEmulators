@@ -1,2 +1,2 @@
 # Emulators for ROM in Go
-# Created as a pet project
+Created as a pet project
